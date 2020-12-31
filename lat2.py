@@ -1,0 +1,23 @@
+nim = input("Masukkan NIM      : ")
+nama = input("Masukkan Nama Mhs : ")
+alamat = input("Masukkan Alamat   : ")
+print("")
+teks = "{}|{}|{}\n".format(nim, nama, alamat)
+data = open("datamhs.txt", "w")
+data.write(teks)
+data.close()
+tanya = input("Ulangi input lagi (y/n)? ")
+print("")
+while tanya == "y" :
+    nim1 = input("Masukkan NIM      : ")
+    nama1 = input("Masukkan Nama Mhs : ")
+    alamat1 = input("Masukkan Alamat   : ")
+    print("")
+    teks1 = "{}|{}|{}\n".format(nim1, nama1, alamat1)
+    data1 = open("datamhs.txt", "a")
+    data1.write(teks1)
+    data1.close()
+    tanya = input("Ulangi input lagi (y/n)? ")
+    print("")
+    if tanya == "n":
+        break
